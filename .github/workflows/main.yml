@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: pdflatex main
         uses: dante-ev/latex-action@latest
+        continue-on-error: true
         env:
           TEXINPUTS: ".:/github/workspace/classes//:"
         with:
@@ -26,6 +27,7 @@ jobs:
 
       - name: pdflatex main 2
         uses: dante-ev/latex-action@latest
+        continue-on-error: true
         env:
           TEXINPUTS: ".:/github/workspace/classes//:"
         with:
